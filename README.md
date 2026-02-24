@@ -4,6 +4,11 @@
 
 ---
 
+**Author:** Marquis L Wideman
+**Email:** marquiswideman13@gmail.com
+**LinkedIn:** [www.linkedin.com/in/marquis-wideman-728632150](www.linkedin.com/in/marquis-wideman-728632150)
+**Location:** Charleston, SC
+
 ## 👤 About
 
 I'm building practical networking skills through structured labs using Cisco Packet Tracer. This repository serves as a living portfolio of my hands-on experience — every lab includes topology screenshots, configuration notes, and key takeaways.
@@ -65,6 +70,12 @@ networking-labs/
 ---
 
 ## 📬 Connect With Me
+
+**Marquis L Wideman**
+📧 Email: marquiswideman13@gmail
+📱 Phone: (843) 617-4040
+💼 LinkedIn: [www.linkedin.com/in/marquis-wideman-728632150](www.linkedin.com/in/marquis-wideman-728632150)
+📍 Location: Charleston, SC
 
 - **LinkedIn:** [your-linkedin]
 - **Email:** [your-email]
