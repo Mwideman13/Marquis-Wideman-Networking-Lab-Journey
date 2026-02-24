@@ -71,14 +71,11 @@ networking-labs/
 
 ## 📬 Connect With Me
 
-**Marquis L Wideman**
-📧 Email: marquiswideman13@gmail
-📱 Phone: (843) 617-4040
-💼 LinkedIn: [www.linkedin.com/in/marquis-wideman-728632150](www.linkedin.com/in/marquis-wideman-728632150)
+**Marquis L Wideman** 
+📧 Email: marquiswideman13@gmail 
+📱 Phone: (843) 617-4040 
+💼 LinkedIn: [www.linkedin.com/in/marquis-wideman-728632150](www.linkedin.com/in/marquis-wideman-728632150) 
 📍 Location: Charleston, SC
-
-- **LinkedIn:** [your-linkedin]
-- **Email:** [your-email]
 
 ---
 
