@@ -5,11 +5,8 @@
 ---
 
 **Author:** Marquis L Wideman
-
 **Email:** marquiswideman13@gmail.com
-
 **LinkedIn:** [www.linkedin.com/in/marquis-wideman-728632150](www.linkedin.com/in/marquis-wideman-728632150)
-
 **Location:** Charleston, SC
 
 ## 👤 About
