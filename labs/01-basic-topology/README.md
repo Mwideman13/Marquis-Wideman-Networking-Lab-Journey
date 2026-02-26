@@ -77,10 +77,10 @@ PC> ping 192.168.2.10
 
 ## 💡 Key Takeaways
 
-- [ ] Understood the difference between straight-through and crossover cables
-- [ ] Practiced assigning IP addresses to router interfaces
-- [ ] Verified end-to-end connectivity with ping
-- [ ] Learned how to use `show ip interface brief` to check interface status
+- ✅ Understood the difference between straight-through and crossover cables
+- ✅ Practiced assigning IP addresses to router interfaces
+- ✅ Verified end-to-end connectivity with ping
+- ✅ Learned how to use `show ip interface brief` to check interface status
 
 ---
 
@@ -90,4 +90,4 @@ PC> ping 192.168.2.10
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 30 minutes · **Date:** 2/25/2026
