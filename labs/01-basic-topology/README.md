@@ -71,6 +71,11 @@ PC> ping 192.168.2.10
 ```
 
 > _Add verification screenshots to the `/screenshots` folder and embed them here._
+<img width="1440" height="900" alt="01-basic-topology lab (PC0 screenshot)" src="https://github.com/user-attachments/assets/19a6d542-a8b7-4e2c-a3a8-56614b9531dd" />
+<img width="1440" height="900" alt="01-basic-topology lab (PC1 screenshot)" src="https://github.com/user-attachments/assets/0b8a09fd-5806-4414-908d-cee6b5a6a02a" />
+<img width="1440" height="900" alt="01-basic-topology lab (PC2 screenshot)" src="https://github.com/user-attachments/assets/626efc46-31c7-4059-8beb-1d369fc83fdd" />
+<img width="1440" height="900" alt="01-basic-topology lab (PC3 screenshot)" src="https://github.com/user-attachments/assets/5534c266-7bec-4ddc-a8e7-90cdc3725e2e" />
+<img width="1440" height="900" alt="01-basic-topology lab (R1 screenshot)" src="https://github.com/user-attachments/assets/41ed05c6-d68b-42df-8ac7-0cb5fb11c1cc" />
 
 ---
 
