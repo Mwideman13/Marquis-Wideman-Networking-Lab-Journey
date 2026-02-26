@@ -8,7 +8,7 @@ Build and connect a basic network topology in Cisco Packet Tracer using routers,
 ## 🗺️ Topology
 
 > _Add your topology screenshot here once the lab is complete._
-> labs/{01-basic-topology/01-basic-topology lab (PC0 screenshot).png
+labs/{01-basic-topology/01-basic-topology lab (PC0 screenshot).png
 
 ```
 [ PC0 ] ---+                        +--- [ PC2 ]
