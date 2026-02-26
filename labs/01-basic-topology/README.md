@@ -69,8 +69,6 @@ R1# show ip interface brief
 R1# show interfaces
 PC> ping 192.168.2.10
 ```
-
-> _Add verification screenshots to the `/screenshots` folder and embed them here._
 <img width="1440" height="900" alt="01-basic-topology lab (PC0 screenshot)" src="https://github.com/user-attachments/assets/19a6d542-a8b7-4e2c-a3a8-56614b9531dd" />
 <img width="1440" height="900" alt="01-basic-topology lab (PC1 screenshot)" src="https://github.com/user-attachments/assets/0b8a09fd-5806-4414-908d-cee6b5a6a02a" />
 <img width="1440" height="900" alt="01-basic-topology lab (PC2 screenshot)" src="https://github.com/user-attachments/assets/626efc46-31c7-4059-8beb-1d369fc83fdd" />
