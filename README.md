@@ -69,6 +69,13 @@ networking-labs/
 
 ---
 
+## Education & Certifications
+* University of South Carolina, BS Computer Engineering - May 2020
+* Wilmington University, MS Information System Technologies Concentration Technology Project Management - Expected Graduation Fall 2027
+* Microsoft Certified: Azure AI Fundamentals - February 2026
+* CompTIA Network+ - October 2025
+* CompTIA Security+ - May 2023
+
 ## 📬 Connect With Me
 
 **Marquis L Wideman**  
