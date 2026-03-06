@@ -6,8 +6,7 @@ Create and configure VLANs on Cisco switches to segment network traffic, assign 
 ---
 
 ## 🗺️ Topology
-
-> _Add your topology screenshot here once the lab is complete._
+<img width="1440" height="900" alt="Lab 02-VLANs   Trunking (topology screenshot)" src="https://github.com/user-attachments/assets/d39bfe59-0271-42cc-b583-d353562895c1" />
 
 ```
 [ PC0 - VLAN 10 ]---+                        +---[ PC2 - VLAN 10 ]
@@ -157,6 +156,8 @@ SW1# show vlan brief
 SW2# show vlan brief
 ```
 ✔️ You should see VLANs 10, 20, and 30 listed as active with the correct ports assigned.
+<img width="1440" height="900" alt="SW1 Show VLAN Brief" src="https://github.com/user-attachments/assets/ca0b74f5-436e-4f73-9fb7-b4fe2817a2cb" />
+<img width="1440" height="900" alt="SW2 Show VLAN Brief" src="https://github.com/user-attachments/assets/4bcdcf72-1b0b-4216-a6bd-ddecdc5a6cc5" />
 
 ### Check trunk is up
 ```
@@ -164,6 +165,8 @@ SW1# show interfaces trunk
 SW2# show interfaces trunk
 ```
 ✔️ You should see GigabitEthernet0/1 listed as a trunk carrying VLANs 10, 20, and 30.
+<img width="1440" height="900" alt="SW1 Show Interface Trunk" src="https://github.com/user-attachments/assets/89b65420-d2af-4fa3-88aa-d791c028b01a" />
+<img width="1440" height="900" alt="SW2 Show Interface Trunk" src="https://github.com/user-attachments/assets/ca485c6e-7f94-4046-a904-7e3fdb018bb3" />
 
 ### Test same-VLAN connectivity (should SUCCEED ✅)
 ```
@@ -171,6 +174,9 @@ PC0> ping 192.168.10.11    (PC0 to PC2 — both VLAN 10)
 PC1> ping 192.168.20.11    (PC1 to PC3 — both VLAN 20)
 PC4> ping 192.168.30.11    (PC4 to PC5 — both VLAN 30)
 ```
+<img width="1440" height="900" alt="Ping PC0 to PC2 (Succeed)" src="https://github.com/user-attachments/assets/a0487193-3232-4053-8fe8-d2205eea4128" />
+<img width="1440" height="900" alt="Ping PC1 to PC3 (Succeed)" src="https://github.com/user-attachments/assets/62f1bc07-4703-4fc2-bf5f-5461caaa3037" />
+<img width="1440" height="900" alt="Ping PC4 to PC5 (Succeed)" src="https://github.com/user-attachments/assets/800d4cf3-707a-4948-a3fe-62f4a6931576" />
 
 ### Test cross-VLAN connectivity (should FAIL ❌)
 ```
@@ -178,6 +184,8 @@ PC0> ping 192.168.20.10    (PC0 VLAN 10 → PC1 VLAN 20)
 PC1> ping 192.168.30.10    (PC1 VLAN 20 → PC4 VLAN 30)
 ```
 ✔️ These pings **failing** confirms your VLANs are properly isolated — this is correct behavior! Inter-VLAN routing requires a router, which is covered in a future lab.
+<img width="1440" height="900" alt="Ping PC0 to PC1 (Failure)" src="https://github.com/user-attachments/assets/20366f26-5808-4436-b6b8-43c2b8c6cc9a" />
+<img width="1440" height="900" alt="Ping PC1 to PC4 (Failure)" src="https://github.com/user-attachments/assets/c789b21a-d8c8-4af6-9c2a-bb806d989f51" />
 
 ---
 
@@ -194,13 +202,13 @@ PC1> ping 192.168.30.10    (PC1 VLAN 20 → PC4 VLAN 30)
 
 ## 💡 Key Takeaways
 
-- [ ] Understood why VLANs are used to segment network traffic
-- [ ] Created VLANs and assigned meaningful names
-- [ ] Configured access ports to assign end devices to VLANs
-- [ ] Configured a trunk link between two switches using 802.1Q
-- [ ] Verified same-VLAN communication works
-- [ ] Verified cross-VLAN communication is blocked (as expected)
-- [ ] Understood the role of the native VLAN on a trunk
+- ✅ Understood why VLANs are used to segment network traffic
+- ✅ Created VLANs and assigned meaningful names
+- ✅ Configured access ports to assign end devices to VLANs
+- ✅ Configured a trunk link between two switches using 802.1Q
+- ✅ Verified same-VLAN communication works
+- ✅ Verified cross-VLAN communication is blocked (as expected)
+- ✅ Understood the role of the native VLAN on a trunk
 
 ---
 
@@ -211,4 +219,4 @@ PC1> ping 192.168.30.10    (PC1 VLAN 20 → PC4 VLAN 30)
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 60 minutes · **Date:** 3/5/2026
