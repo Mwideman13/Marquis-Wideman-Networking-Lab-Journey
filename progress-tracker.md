@@ -19,7 +19,7 @@ A detailed log of milestones, completions, and reflections throughout my network
 |------|-----------|-------|
 |2/23/2026| Started repository | |
 |2/25/2026| Completed Lab 01 | |
-| | Completed Lab 02 | |
+|3/5/2026| Completed Lab 02 | |
 | | Completed Lab 03 | |
 | | Completed Lab 04 | |
 | | Completed Lab 05 | |
