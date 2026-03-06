@@ -22,8 +22,8 @@ I'm building practical networking skills through structured labs using Cisco Pac
 | # | Lab | Topics Covered | Status |
 |---|-----|---------------|--------|
 | 01 | [Basic Topology & Cabling](./labs/01-basic-topology/) | Physical topology, device connections, console access | ✅ Complete |
-| 02 | [VLANs & Trunking](./labs/02-vlans/) | VLAN creation, trunk ports, inter-VLAN routing | 🔄 In Progress |
-| 03 | [Static Routing](./labs/03-static-routing/) | Static routes, default routes, next-hop addressing | ⬜ Not Started |
+| 02 | [VLANs & Trunking](./labs/02-vlans/) | VLAN creation, trunk ports, inter-VLAN routing | ✅ In Progress |
+| 03 | [Static Routing](./labs/03-static-routing/) | Static routes, default routes, next-hop addressing | 🔄 Not Started |
 | 04 | [OSPF](./labs/04-ospf/) | OSPFv2, single/multi-area, DR/BDR election | ⬜ Not Started |
 | 05 | [DHCP & DNS](./labs/05-dhcp-dns/) | DHCP pools, DNS resolution, DHCP relay | ⬜ Not Started |
 | 06 | [Access Control Lists](./labs/06-acls/) | Standard & extended ACLs, named ACLs | ⬜ Not Started |
