@@ -7,7 +7,7 @@ Configure static routes on multiple Cisco routers to enable communication betwee
 
 ## 🗺️ Topology
 
-> _Add your topology screenshot here once the lab is complete._
+<img width="2560" height="1080" alt="Lab 3 Network Topology" src="https://github.com/user-attachments/assets/d0870f9e-883c-4c5e-b701-b53f0a41788d" />
 
 ```
 [ PC0 ]---[ R1 ]---[ R2 ]---[ R3 ]---[ PC3 ]
@@ -183,6 +183,9 @@ R2# show ip route
 R3# show ip route
 ```
 ✔️ You should see `S` (static) entries for all remote networks and `C` (connected) entries for directly connected networks.
+<img width="1440" height="900" alt="R0 Show IP Route" src="https://github.com/user-attachments/assets/dd4e2871-5104-416e-a088-67e77445c007" />
+<img width="1440" height="900" alt="R1 Show IP Route" src="https://github.com/user-attachments/assets/03ee9c13-e60d-4b8e-9106-243e3ba2271f" />
+<img width="1440" height="900" alt="R2 Show IP Route" src="https://github.com/user-attachments/assets/e57234e5-55aa-4bd9-9fdb-7d2afbbfd11d" />
 
 ### Check interfaces are up
 ```
@@ -191,12 +194,17 @@ R2# show ip interface brief
 R3# show ip interface brief
 ```
 ✔️ All configured interfaces should show `up/up` — not `administratively down`.
+<img width="1440" height="900" alt="R0 Show IP Interface Brief" src="https://github.com/user-attachments/assets/95a42706-dec3-47f8-9f76-7a1b285023c7" />
+<img width="1440" height="900" alt="R1 Show IP Interface Brief" src="https://github.com/user-attachments/assets/502c7f39-704e-414c-a15a-7a8542a535e1" />
+<img width="1440" height="900" alt="R2 Show IP Interface Brief" src="https://github.com/user-attachments/assets/ffd8a7e0-3450-4538-93cc-d49dce59a090" />
 
 ### Test connectivity — Same site (should SUCCEED ✅)
 ```
 PC0> ping 192.168.20.10    (PC0 to PC1 — same router, different LAN)
 PC2> ping 192.168.40.10    (PC2 to PC3 — same router, different LAN)
 ```
+<img width="1440" height="900" alt="Ping Test (PC0 to PC1 — same router, different LAN)" src="https://github.com/user-attachments/assets/71ca6792-fe04-4d33-8a59-77f293e77a99" />
+<img width="1440" height="900" alt="Ping Test (PC2 to PC3 — same router, different LAN)" src="https://github.com/user-attachments/assets/87de65eb-3e0a-4610-9105-b5b2f16d09bf" />
 
 ### Test connectivity — Across routers (should SUCCEED ✅)
 ```
@@ -205,12 +213,17 @@ PC0> ping 192.168.40.10    (Site A to Site B LAN 2)
 PC1> ping 192.168.30.10    (Site A LAN 2 to Site B)
 PC3> ping 192.168.10.10    (Site B to Site A — reverse path)
 ```
+<img width="1440" height="900" alt="Ping Test (Site A to Site B — across R1, R2, R3)" src="https://github.com/user-attachments/assets/1a29ad95-a4c6-4727-b061-6f9fa4fac41c" />
+<img width="1440" height="900" alt="Ping Test (Site A to Site B LAN 2)" src="https://github.com/user-attachments/assets/3e3f26ea-7507-496d-b752-6ed000adec7f" />
+<img width="1440" height="900" alt="Ping Test (Site A LAN 2 to Site B)" src="https://github.com/user-attachments/assets/823c4344-00b8-4bbd-8051-347d52cabfaf" />
+<img width="1440" height="900" alt="Ping Test (Site B to Site A — reverse path)" src="https://github.com/user-attachments/assets/d49a6c44-8366-47df-ab03-b8bf831dc5dc" />
 
 ### Trace the path (bonus)
 ```
 PC0> tracert 192.168.40.10
 ```
 ✔️ You should see the packet hop through R1 → R2 → R3 before reaching PC3. This visually confirms your static routes are working hop by hop.
+<img width="1440" height="900" alt="Tracert Test (PC0 to PC3)" src="https://github.com/user-attachments/assets/b8c00b05-eda1-4a8b-824c-4f3be8bbacae" />
 
 ---
 
@@ -228,13 +241,13 @@ PC0> tracert 192.168.40.10
 
 ## 💡 Key Takeaways
 
-- [ ] Understood how routers use routing tables to forward traffic
-- [ ] Configured static routes using next-hop IP addresses
-- [ ] Used /30 subnets for point-to-point WAN links
-- [ ] Understood that routing must be configured in both directions
-- [ ] Used `show ip route` to verify static and connected routes
-- [ ] Used `tracert` to visualize the hop-by-hop path through the network
-- [ ] Diagnosed and fixed a routing issue using troubleshooting steps
+- ✅ Understood how routers use routing tables to forward traffic
+- ✅ Configured static routes using next-hop IP addresses
+- ✅ Used /30 subnets for point-to-point WAN links
+- ✅ Understood that routing must be configured in both directions
+- ✅ Used `show ip route` to verify static and connected routes
+- ✅ Used `tracert` to visualize the hop-by-hop path through the network
+- ✅ Diagnosed and fixed a routing issue using troubleshooting steps
 
 ---
 
@@ -244,4 +257,4 @@ PC0> tracert 192.168.40.10
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 65 minutes · **Date:** 3/23/2026
