@@ -8,6 +8,7 @@ Configure OSPFv2 on multiple Cisco routers to enable dynamic routing within a si
 ## 🗺️ Topology
 
 > _Add your topology screenshot here once the lab is complete._
+<img width="2560" height="1080" alt="Lab 04 Network Topology" src="https://github.com/user-attachments/assets/efd98bfb-a4f3-40ef-a518-67543ad73b04" />
 
 ```
                     [ PC1 ]
@@ -206,12 +207,20 @@ R4# show ip ospf neighbor
 ```
 ✔️ You should see each router's neighbors listed with a state of **FULL**. If the state is stuck at INIT or 2WAY, there is a configuration mismatch.
 
+<img width="2560" height="1080" alt="R4 Show OSPF Neighbor" src="https://github.com/user-attachments/assets/3d1889c0-5eac-43b0-b69e-9c1891642cbc" />
+<img width="2560" height="1080" alt="R3 Show OSPF Neighbor" src="https://github.com/user-attachments/assets/887ec81c-9a56-40cb-9f95-ddcf9253992b" />
+<img width="2560" height="1080" alt="R2 Show OSPF Neighbor" src="https://github.com/user-attachments/assets/1379660c-9b59-41e9-aed9-1af650d3ef8a" />
+<img width="2560" height="1080" alt="R1 Show OSPF Neighbor" src="https://github.com/user-attachments/assets/08d7b6af-40df-499c-8d4e-c59f136a7c38" />
+
 ### Step 2 — Check routing tables are populated dynamically
 ```
 R1# show ip route
 R2# show ip route
 ```
 ✔️ You should see **O** (OSPF) entries for all remote networks. This means OSPF learned the routes automatically — no static routes needed!
+
+<img width="2560" height="1080" alt="R2 Show IP Route" src="https://github.com/user-attachments/assets/0b8563d1-2ef4-4503-a1de-2e626a511b0d" />
+<img width="2560" height="1080" alt="R1 Show IP Route" src="https://github.com/user-attachments/assets/d0498173-5885-4c1b-83be-95d1c06708d3" />
 
 ### Step 3 — Check OSPF is running correctly
 ```
@@ -220,11 +229,16 @@ R2# show ip ospf
 ```
 ✔️ Confirms the Router ID, OSPF process, and Area 0 membership.
 
+<img width="2560" height="1080" alt="R2 Show IP OSPF" src="https://github.com/user-attachments/assets/91857083-ae27-424b-978d-93fec41a498c" />
+<img width="2560" height="1080" alt="R1 Show IP OSPF" src="https://github.com/user-attachments/assets/ac61500b-1c41-4510-b763-4478a6054799" />
+
 ### Step 4 — Check interface-level OSPF info
 ```
 R2# show ip ospf interface
 ```
 ✔️ Shows OSPF cost, hello/dead timers, and DR/BDR status per interface.
+
+<img width="2560" height="1080" alt="R2 Show IP OSPF Interface" src="https://github.com/user-attachments/assets/a907c09a-e26b-43bc-9503-7b72ae012ae6" />
 
 ### Step 5 — Test end-to-end connectivity
 ```
@@ -233,12 +247,18 @@ PC0> ping 192.168.40.10    (R1 LAN to R4 LAN)
 PC2> ping 192.168.40.10    (R3 LAN to R4 LAN)
 PC3> ping 192.168.10.10    (R4 LAN back to R1 LAN)
 ```
+<img width="2560" height="1080" alt="Ping R4 LAN to R1 LAN" src="https://github.com/user-attachments/assets/7cf35a4e-2d13-45b6-a8c3-6ad3b2d74cff" />
+<img width="2560" height="1080" alt="Ping R3 LAN to R4 LAN" src="https://github.com/user-attachments/assets/3854c6c5-8937-44ac-b961-f61b6870f859" />
+<img width="2560" height="1080" alt="Ping R1 LAN to R4 LAN" src="https://github.com/user-attachments/assets/62f19d4d-f820-47bd-96f7-578ee781d90b" />
+<img width="2560" height="1080" alt="Ping R1 LAN to R3 LAN" src="https://github.com/user-attachments/assets/fe54c6ab-399c-4140-ac02-74093cf1326c" />
 
 ### Step 6 — Trace the path (bonus)
 ```
 PC0> tracert 192.168.40.10
 ```
 ✔️ Should show hops through R1 → R2 → R4 confirming OSPF chose the optimal path.
+
+<img width="2560" height="1080" alt="Tracert to R4 LAN" src="https://github.com/user-attachments/assets/c8e27a3c-61eb-4fde-a276-53792972ac88" />
 
 ---
 
@@ -256,13 +276,13 @@ PC0> tracert 192.168.40.10
 
 ## 💡 Key Takeaways
 
-- [ ] Understood why dynamic routing protocols like OSPF are preferred over static routes at scale
-- [ ] Configured OSPFv2 with a manually set Router ID using a loopback interface
-- [ ] Advertised networks into OSPF using the `network` command with wildcard masks
-- [ ] Verified OSPF neighbor adjacencies reached FULL state
-- [ ] Read the routing table and identified OSPF-learned routes marked with `O`
-- [ ] Understood OSPF Area 0 and why all routers must belong to the backbone area
-- [ ] Tested full end-to-end connectivity across a 4-router topology
+- ✅ Understood why dynamic routing protocols like OSPF are preferred over static routes at scale
+- ✅ Configured OSPFv2 with a manually set Router ID using a loopback interface
+- ✅ Advertised networks into OSPF using the `network` command with wildcard masks
+- ✅ Verified OSPF neighbor adjacencies reached FULL state
+- ✅ Read the routing table and identified OSPF-learned routes marked with `O`
+- ✅ Understood OSPF Area 0 and why all routers must belong to the backbone area
+- ✅ Tested full end-to-end connectivity across a 4-router topology
 
 ---
 
@@ -272,4 +292,4 @@ PC0> tracert 192.168.40.10
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 57 minutes · **Date:** 3/26/2026
