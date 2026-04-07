@@ -8,6 +8,7 @@ Configure a Cisco router as a DHCP server to automatically assign IP addresses t
 ## 🗺️ Topology
 
 > _Add your topology screenshot here once the lab is complete._
+<img width="907" height="565" alt="Lab 05 Network Topology" src="https://github.com/user-attachments/assets/4e6c31a9-a058-47e8-a061-7b6f0e37fa58" />
 
 ```
 [ PC0 ]---+                          +---[ PC2 ]
@@ -198,6 +199,8 @@ R1# show ip dhcp binding
 R2# show ip dhcp binding
 ```
 ✔️ You should see each PC listed with its assigned IP, MAC address, and lease expiry time.
+<img width="713" height="713" alt="DHCP Assignments (R0)" src="https://github.com/user-attachments/assets/2e8fd981-f5e7-4743-9db9-5956dc90ae09" />
+<img width="701" height="712" alt="DHCP Assignments (R1)" src="https://github.com/user-attachments/assets/e8e54a95-06e9-4883-97d0-fb43d65c1ac5" />
 
 ### Check DHCP pool status
 ```
@@ -205,12 +208,15 @@ R1# show ip dhcp pool
 R2# show ip dhcp pool
 ```
 ✔️ Shows how many addresses have been handed out and how many remain available.
+<img width="699" height="710" alt="DHCP Pool Status (R0)" src="https://github.com/user-attachments/assets/e978c210-a22a-4370-8ccf-f375b55b5fd2" />
+<img width="702" height="708" alt="DHCP Pool Status (R1)" src="https://github.com/user-attachments/assets/0fc0df00-731f-47a2-ac75-78dc0a805cc0" />
 
 ### Check for any DHCP conflicts
 ```
 R1# show ip dhcp conflict
 ```
 ✔️ Should return empty. If any IPs appear here, DHCP detected a conflict and pulled that address from the pool.
+<img width="713" height="720" alt="DHCP Conflicts" src="https://github.com/user-attachments/assets/9931678a-d5a7-46af-a951-12f2a019f34d" />
 
 ### Verify PCs received IP configuration
 On each PC: **Desktop** → **Command Prompt**
@@ -218,6 +224,7 @@ On each PC: **Desktop** → **Command Prompt**
 PC> ipconfig
 ```
 ✔️ Each PC should show an IP in the correct range, the correct default gateway, and the DNS server IP (192.168.10.2).
+<img width="706" height="709" alt="IPConfig (PC0)" src="https://github.com/user-attachments/assets/461b4799-0026-4196-9132-5ed5c0b3126b" />
 
 ### Test basic connectivity
 ```
@@ -225,6 +232,7 @@ PC0> ping 192.168.10.1      (ping R1 — same LAN)
 PC0> ping 192.168.20.1      (ping R2 — across WAN)
 PC0> ping 192.168.20.11     (ping PC2 — cross-LAN)
 ```
+<img width="700" height="712" alt="Basic Connectivity (PC0)" src="https://github.com/user-attachments/assets/673460d8-bcbc-4c18-9fb8-07d80c9dd832" />
 
 ### Test DNS resolution (the exciting part!)
 ```
@@ -233,6 +241,8 @@ PC0> ping r2.lab.local
 PC2> ping pc0.lab.local
 ```
 ✔️ If DNS is working, these hostnames will resolve to IP addresses and the pings will succeed — no need to remember IP addresses!
+<img width="708" height="717" alt="Check DNS Resolution (PC0)" src="https://github.com/user-attachments/assets/0f62bf75-7e2a-4dcf-ba21-99796c57355b" />
+<img width="709" height="705" alt="Check DNS Resolution (PC2)" src="https://github.com/user-attachments/assets/4e22c1fd-1e06-4a92-a27e-1f3be5074dc2" />
 
 ### Check DNS server is responding
 On any PC:
@@ -240,6 +250,7 @@ On any PC:
 PC> nslookup pc2.lab.local
 ```
 ✔️ Should return the IP address mapped to that hostname in your DNS records.
+<img width="704" height="710" alt="Check DNS Server Response (PC1)" src="https://github.com/user-attachments/assets/5c62a6be-ed8a-4664-8740-432dd8dae7b8" />
 
 ---
 
@@ -258,14 +269,14 @@ PC> nslookup pc2.lab.local
 
 ## 💡 Key Takeaways
 
-- [ ] Understood why DHCP is essential in real networks — manual IP config doesn't scale
-- [ ] Configured a DHCP pool with network, gateway, DNS, and lease settings
-- [ ] Used `ip dhcp excluded-address` to protect static devices from being overwritten
-- [ ] Verified DHCP bindings with `show ip dhcp binding`
-- [ ] Configured a DNS server with A records mapping hostnames to IPs
-- [ ] Successfully pinged devices by hostname instead of IP address
-- [ ] Used `nslookup` to verify DNS resolution is working
-- [ ] Understood the difference between static and dynamically assigned IPs
+- ✅ Understood why DHCP is essential in real networks — manual IP config doesn't scale
+- ✅ Configured a DHCP pool with network, gateway, DNS, and lease settings
+- ✅ Used `ip dhcp excluded-address` to protect static devices from being overwritten
+- ✅ Verified DHCP bindings with `show ip dhcp binding`
+- ✅ Configured a DNS server with A records mapping hostnames to IPs
+- ✅ Successfully pinged devices by hostname instead of IP address
+- ✅ Used `nslookup` to verify DNS resolution is working
+- ✅ Understood the difference between static and dynamically assigned IPs
 
 ---
 
@@ -275,4 +286,4 @@ PC> nslookup pc2.lab.local
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 82 minutes · **Date:** 4/7/2026
