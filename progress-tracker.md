@@ -22,7 +22,7 @@ A detailed log of milestones, completions, and reflections throughout my network
 |3/5/2026| Completed Lab 02 | |
 |3/23/2026| Completed Lab 03 | |
 |3/26/2026| Completed Lab 04 | |
-| | Completed Lab 05 | |
+|4/7/2026| Completed Lab 05 | |
 | | Completed Lab 06 | |
 | | Completed Lab 07 | |
 | | Completed Lab 08 | |
