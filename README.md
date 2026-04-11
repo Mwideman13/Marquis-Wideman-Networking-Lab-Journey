@@ -26,8 +26,8 @@ I'm building practical networking skills through structured labs using Cisco Pac
 | 03 | [Static Routing](./labs/03-static-routing/) | Static routes, default routes, next-hop addressing | ✅ In Progress |
 | 04 | [OSPF](./labs/04-ospf/) | OSPFv2, single/multi-area, DR/BDR election | ✅ Not Started |
 | 05 | [DHCP & DNS](./labs/05-dhcp-dns/) | DHCP pools, DNS resolution, DHCP relay | ✅ Not Started |
-| 06 | [Access Control Lists](./labs/06-acls/) | Standard & extended ACLs, named ACLs | 🔄 Not Started |
-| 07 | [NAT & PAT](./labs/07-nat-pat/) | Static NAT, dynamic NAT, PAT/overload | ⬜ Not Started |
+| 06 | [Access Control Lists](./labs/06-acls/) | Standard & extended ACLs, named ACLs | ✅ Not Started |
+| 07 | [NAT & PAT](./labs/07-nat-pat/) | Static NAT, dynamic NAT, PAT/overload | 🔄 Not Started |
 | 08 | [Spanning Tree Protocol](./labs/08-spanning-tree/) | STP, RSTP, root bridge election, port roles | ⬜ Not Started |
 | 09 | [EtherChannel](./labs/09-etherchannel/) | LACP, PAgP, Layer 2/3 EtherChannel | ⬜ Not Started |
 | 10 | [Capstone Project](./labs/10-capstone-project/) | Full enterprise network design | ⬜ Not Started |
