@@ -16,6 +16,7 @@ Configure standard and extended Access Control Lists (ACLs) on Cisco routers to 
                            |                              |
 [ PC2 - 192.168.10.12 ]---+              [ PC3 - 192.168.20.11 ]
 ```
+<img width="873" height="378" alt="Lab 06 Network Topology" src="https://github.com/user-attachments/assets/01e6721c-8594-4177-b92e-2a017905bcd2" />
 
 **Devices Used:**
 | Device | Model | Role |
@@ -118,7 +119,9 @@ PC1> ping 192.168.20.10    (should succeed ✅)
 PC2> ping 192.168.20.10    (should succeed ✅)
 ```
 > 💡 This is important — always verify your network works BEFORE applying ACLs. If something is broken after you apply an ACL, you'll know the ACL caused it.
-
+<img width="300" height="257" alt="Baseline Connectivity (PC0)" src="https://github.com/user-attachments/assets/4392f720-294f-4a49-8c22-5035c0471b03" />
+<img width="299" height="246" alt="Baseline Connectivity (PC1)" src="https://github.com/user-attachments/assets/b0730732-e145-4ca9-8d82-9fe73ca259ee" />
+<img width="292" height="229" alt="Baseline Connectivity (PC2)" src="https://github.com/user-attachments/assets/205fa249-3f85-457e-ac35-ced3cfd41433" />
 ---
 
 ### Part A — Standard ACL
@@ -155,12 +158,15 @@ PC0> ping 192.168.20.10    (should SUCCEED ✅ — permitted)
 PC1> ping 192.168.20.10    (should SUCCEED ✅ — permitted)
 PC2> ping 192.168.20.10    (should FAIL ❌ — implicitly denied)
 ```
+<img width="304" height="349" alt="ACL Deny Works on PC2" src="https://github.com/user-attachments/assets/1ff936f0-f308-4c8d-a2fc-a03a85f4fc6f" />
 
 Check ACL hit counters:
 ```
 R2# show access-lists
 ```
 ✔️ You should see match counts incrementing next to each rule — this confirms the ACL is actively filtering traffic.
+
+<img width="2560" height="1080" alt="Check ACL Hit Counters" src="https://github.com/user-attachments/assets/115361f7-7cb4-4a49-a686-3d7a46b834a7" />
 
 ---
 
@@ -216,17 +222,23 @@ PC0> ping 192.168.20.10         (should FAIL ❌ — ICMP blocked)
 PC1> ping 192.168.20.10         (should SUCCEED ✅ — full access)
 PC2> ping 192.168.20.10         (should FAIL ❌ — all traffic blocked)
 ```
+<img width="307" height="357" alt="Verify Extended ACL PC0 ICMP Blocked" src="https://github.com/user-attachments/assets/bb6dac95-0b48-4979-97be-a7b4d3c3a9a9" />
+<img width="302" height="375" alt="Verify Extended ACL PC1 Allow Full Access" src="https://github.com/user-attachments/assets/f3071bbc-5020-4772-bf80-630783b26be5" />
+<img width="310" height="476" alt="Verify Extended ACL PC2 Block All Access" src="https://github.com/user-attachments/assets/5fc9bb88-7f15-4c0e-bde1-bcbc08ef6f31" />
 
 To test HTTP from PC0:
 1. Click PC0 → **Desktop** → **Web Browser**
 2. Type `http://192.168.20.10` in the address bar
 3. The page should load ✅ — HTTP is permitted even though ping is blocked
 
+<img width="2560" height="1080" alt="Verify HTTP Traffic On Port 80 On PC0" src="https://github.com/user-attachments/assets/5c6f232b-aaa7-48fb-b444-7bb22991daa6" />
+
 Check ACL hit counters:
 ```
 R1# show access-lists
 ```
 ✔️ Each rule should show match counts. This is very useful for seeing exactly which rule is firing.
+<img width="2560" height="1080" alt="Show Access Lists" src="https://github.com/user-attachments/assets/4e1eea95-ec76-4f9f-9d4f-9128871a8246" />
 
 ---
 
@@ -245,15 +257,15 @@ R1# show access-lists
 
 ## 💡 Key Takeaways
 
-- [ ] Understood how ACLs process rules top-to-bottom with first-match logic
-- [ ] Understood the implicit deny at the end of every ACL
-- [ ] Configured a standard ACL filtering on source IP only
-- [ ] Placed the standard ACL close to the destination (best practice)
-- [ ] Configured an extended ACL filtering on source, destination, protocol, and port
-- [ ] Placed the extended ACL close to the source (best practice)
-- [ ] Verified ACL hit counters using `show access-lists`
-- [ ] Understood the difference between inbound and outbound ACL placement
-- [ ] Removed and replaced an ACL without breaking the network
+- ✅ Understood how ACLs process rules top-to-bottom with first-match logic
+- ✅ Understood the implicit deny at the end of every ACL
+- ✅ Configured a standard ACL filtering on source IP only
+- ✅ Placed the standard ACL close to the destination (best practice)
+- ✅ Configured an extended ACL filtering on source, destination, protocol, and port
+- ✅ Placed the extended ACL close to the source (best practice)
+- ✅ Verified ACL hit counters using `show access-lists`
+- ✅ Understood the difference between inbound and outbound ACL placement
+- ✅ Removed and replaced an ACL without breaking the network
 
 ---
 
@@ -263,4 +275,4 @@ R1# show access-lists
 
 ---
 
-**Time to Complete:** ___ minutes · **Date:** ___________
+**Time to Complete:** 60 minutes · **Date:** 4/11/2026
